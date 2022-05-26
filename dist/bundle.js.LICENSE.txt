@@ -1,0 +1,17 @@
+/*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
+
+//!FUNCTIONS
+
+//!Function dat will create an api link based on city, that will be fetched later
+
+//!Function to convert timestamps to date
+
+//!Function to detect what to display sunset or sunrise based on what cuurent date
+
+//!GET ELEMENTS
+
+//!callback onSuccess for .getCurrentPosition()
+
+//!get search form
+
+//!get search form input

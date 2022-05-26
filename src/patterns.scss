@@ -1,0 +1,32 @@
+%btn {
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+}
+//buttons
+%btn_ni {
+    cursor: pointer;
+    padding: 0.5rem 2rem;
+    border-radius: 0.8rem;
+}
+%backgroundImage {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+%heading {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+%container {
+    width: 100%;
+    margin: 0 auto;
+}
+//function dat creates a flexblocks
+@mixin flexbase($fd,$jc,$ai) {
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+}

@@ -1,0 +1,414 @@
+<div class="current-weather">
+                <div class="cw__identificator">
+        <h2>Current Weather</h2>
+        </div>
+        <div class="cw__content">
+            <div class="cw__main">
+                <div class="cw__head">
+                    <div class="cw__temp-date">
+                        <p class="cw__temp">
+                            ${data.temp}℃
+                        </p>
+                        <div class="cw__date">
+                            ${dtConvert(data.dt)}
+                        </div>
+                    </div>
+                    <p class="cw__feelslike">
+                        Feels like ${data.feels_like}℃
+                    </p>
+                </div>
+                <div class="cw__icon">
+                    <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png" alt="weather icon">
+                </div>
+                <div class="cw__foot">
+                    <div class="cw__weather-details">
+                        <p class="cw__weather">
+                            ${data.weather[0].main}
+                        </p>
+                        <p class="cw__weather-desc">
+                            ${data.weather[0].description}
+                        </p>
+                    </div>
+                    <div class="cw__sunrise-sunset">
+                        <p class="cw__sun-smth">
+                            Sunset
+                        </p>
+                        <p class="cw__sun-time">
+                            19:00
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="cw__extended">
+                <table class="cw__extended-table">
+                    <tr>
+                        <td class="cw__extended-icon">
+                            <i class="fas fa-cloud"></i>
+                        </td>
+                        <td class="cw__td-text">
+                            Cloudness (%)
+                        </td>
+                        <td class="cw__cloudness">
+                            ${data.clouds}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cw__extended-icon">
+                            <i class="fas fa-leaf"></i>
+                        </td>
+                        <td class="cw__td-text">
+                            Dew-point (℃)
+                        </td>
+                        <td class="cw__dewpoint">
+                            ${data.dew_point}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cw__extended-icon">
+                            <i class="fas fa-tint"></i>
+                        </td>
+                        <td class="cw__td-text">
+                            Humidity (%)
+                        </td>
+                        <td class="cw__humidity">
+                            ${data.humidity}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cw__extended-icon">
+                            <i class="fas fa-arrow-down"></i>
+                        </td>
+                        <td class="cw__td-text">
+                            Pressure (mmHg)
+                        </td>
+                        <td class="cw__pressure">
+                            ${pressureConvert(data.pressure)}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cw__extended-icon">
+                            <i class="fas fa-sun"></i>
+                        </td>
+                        <td class="cw__td-text">
+                            UV-Index
+                        </td>
+                        <td class="cw__uv">
+                            ${data.uvi}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cw__extended-icon">
+                            <i class="fas fa-eye"></i>
+                        </td>
+                        <td class="cw__td-text">
+                            Visibility (km)
+                        </td>
+                        <td class="cw__visibility">
+                            ${visibilityConvert(data.visibility)}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cw__extended-icon">
+                            <i class="fas fa-compass"></i>
+                        </td>
+                        <td class="cw__td-text">
+                            Wind direction (deg)
+                        </td>
+                        <td class="cw__wind-dir">
+                            ${data.wind_deg}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cw__extended-icon">
+                            <i class="fas fa-tornado"></i>
+                        </td>
+                        <td class="cw__td-text">
+                            Wind gust (m/s)
+                        </td>
+                        <td class="cw__windgust">
+                            ${data.wind_gust}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cw__extended-icon">
+                            <i class="fas fa-wind"></i>
+                        </td>
+                        <td class="cw__td-text">
+                            Wind Speed (m/s)
+                        </td>
+                        <td class="cw__windspeed">
+                            ${data.wind_speed}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+</div>
+
+
+
+------------------------------------------------------------
+------------------------------------------------------------
+<div class="forecast__24-h">
+                <div class="h-24__identificator">
+                    <h2>Forecast for next 24 hours</h2>
+                </div>
+                <!-- Slider main container -->
+                <div class="swiper h-24__swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper h-24__swiper-wrapper">
+                        <div class="swiper-slide h-24__item">
+                            <h6 class="h-24__item-head">
+                                14:00
+                            </h6>
+                            <div class="h-24__item-icon">
+                                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                            </div>
+                            <p class="h-24__item-foot">
+                                12°       
+                            </p>
+                        </div>
+                        <div class="swiper-slide h-24__item">
+                            <h6 class="h-24__item-head">
+                                14:00
+                            </h6>
+                            <div class="h-24__item-icon">
+                                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                            </div>
+                            <p class="h-24__item-foot">
+                                12°       
+                            </p>
+                        </div>
+                        <div class="swiper-slide h-24__item">
+                            <h6 class="h-24__item-head">
+                                14:00
+                            </h6>
+                            <div class="h-24__item-icon">
+                                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                            </div>
+                            <p class="h-24__item-foot">
+                                12°       
+                            </p>
+                        </div>
+                        <div class="swiper-slide h-24__item">
+                            <h6 class="h-24__item-head">
+                                14:00
+                            </h6>
+                            <div class="h-24__item-icon">
+                                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                            </div>
+                            <p class="h-24__item-foot">
+                                12°       
+                            </p>
+                        </div>
+                        <div class="swiper-slide h-24__item">
+                            <h6 class="h-24__item-head">
+                                14:00
+                            </h6>
+                            <div class="h-24__item-icon">
+                                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                            </div>
+                            <p class="h-24__item-foot">
+                                12°       
+                            </p>
+                        </div>
+                        <div class="swiper-slide h-24__item">
+                            <h6 class="h-24__item-head">
+                                14:00
+                            </h6>
+                            <div class="h-24__item-icon">
+                                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                            </div>
+                            <p class="h-24__item-foot">
+                                12°       
+                            </p>
+                        </div>
+                        <div class="swiper-slide h-24__item">
+                            <h6 class="h-24__item-head">
+                                14:00
+                            </h6>
+                            <div class="h-24__item-icon">
+                                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                            </div>
+                            <p class="h-24__item-foot">
+                                12°       
+                            </p>
+                        </div>
+                        <div class="swiper-slide h-24__item">
+                            <h6 class="h-24__item-head">
+                                14:00
+                            </h6>
+                            <div class="h-24__item-icon">
+                                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                            </div>
+                            <p class="h-24__item-foot">
+                                12°       
+                            </p>
+                        </div>
+                        <div class="swiper-slide h-24__item">
+                            <h6 class="h-24__item-head">
+                                14:00
+                            </h6>
+                            <div class="h-24__item-icon">
+                                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                            </div>
+                            <p class="h-24__item-foot">
+                                12°       
+                            </p>
+                        </div>
+                        <div class="swiper-slide h-24__item">
+                            <h6 class="h-24__item-head">
+                                14:00
+                            </h6>
+                            <div class="h-24__item-icon">
+                                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                            </div>
+                            <p class="h-24__item-foot">
+                                12°       
+                            </p>
+                        </div>
+                        <div class="swiper-slide h-24__item">
+                            <h6 class="h-24__item-head">
+                                14:00
+                            </h6>
+                            <div class="h-24__item-icon">
+                                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                            </div>
+                            <p class="h-24__item-foot">
+                                12°       
+                            </p>
+                        </div>
+                        <div class="swiper-slide h-24__item">
+                            <h6 class="h-24__item-head">
+                                14:00
+                            </h6>
+                            <div class="h-24__item-icon">
+                                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                            </div>
+                            <p class="h-24__item-foot">
+                                12°       
+                            </p>
+                        </div>
+                        <div class="swiper-slide h-24__item">
+                            <h6 class="h-24__item-head">
+                                14:00
+                            </h6>
+                            <div class="h-24__item-icon">
+                                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                            </div>
+                            <p class="h-24__item-foot">
+                                12°       
+                            </p>
+                        </div>
+                        <div class="swiper-slide h-24__item">
+                            <h6 class="h-24__item-head">
+                                14:00
+                            </h6>
+                            <div class="h-24__item-icon">
+                                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                            </div>
+                            <p class="h-24__item-foot">
+                                12°       
+                            </p>
+                        </div>
+                        <div class="swiper-slide h-24__item">
+                            <h6 class="h-24__item-head">
+                                14:00
+                            </h6>
+                            <div class="h-24__item-icon">
+                                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                            </div>
+                            <p class="h-24__item-foot">
+                                12°       
+                            </p>
+                        </div>
+                        <div class="swiper-slide h-24__item">
+                            <h6 class="h-24__item-head">
+                                14:00
+                            </h6>
+                            <div class="h-24__item-icon">
+                                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                            </div>
+                            <p class="h-24__item-foot">
+                                12°       
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div class="swiper-button-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+            <div class="forecast__24-h">
+                <div class="h-24__identificator">
+                    <h2>Forecast for next 24 hours</h2>
+                </div>
+                <div class="swiper h-24__swiper">
+                    <div class="swiper-wrapper h-24__swiper-wrapper">
+                        <div class="swiper-slide h-24__item">
+                            <h6 class="h-24__item-head">
+                                14:00
+                            </h6>
+                            <div class="h-24__item-icon">
+                                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                            </div>
+                            <p class="h-24__item-foot">
+                                12°       
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div class="swiper-button-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+            -->
+----------------------------------------------
+----------------------------------------------
+----------------------------------------------
+<div class="forecast__weekly">
+                <div class="weekly__identificator">
+                    <h2>Forecast for next 24 hours</h2>
+                </div>
+                <div class="swiper weekly__swiper">
+                    <div class="swiper-wrapper weekly__swiper-wrapper">
+                        <div class="swiper-slide weekly__item">
+                            <h6 class="weekly__item-head">
+                                Saturday
+                            </h6>
+                            <div class="weekly__item-icon">
+                                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                            </div>
+                            <div class="weekly__item-foot">
+                                <div class="weekly__item-min">
+                                    <p>Min:</p>
+                                    <p class="weekly__item-temp">
+                                        6°
+                                    </p>
+                                </div>
+                                <div class="weekly__item-max">
+                                    <p>Max:</p>
+                                    <p class="weekly__item-temp">
+                                        12°
+                                    </p>
+                                </div>   
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div class="swiper-button-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
