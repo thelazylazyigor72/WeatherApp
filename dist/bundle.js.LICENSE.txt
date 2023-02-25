@@ -1,17 +1,49 @@
-/*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
+//! Class to make buttons for particular swiper
 
-//!FUNCTIONS
+//! EVENTS
 
-//!Function dat will create an api link based on city, that will be fetched later
+//! FUNCTIONS
 
-//!Function to convert timestamps to date
+//! Function dat will create an api link based on city, that will be fetched later
 
-//!Function to detect what to display sunset or sunrise based on what cuurent date
+//! Function that loads weather data on page
 
-//!GET ELEMENTS
+//! Function that populates 24h weather datas on page and make it like a slider
 
-//!callback onSuccess for .getCurrentPosition()
+//! Function that populates current weather datas on page
 
-//!get search form
+//! Function that populates weekly weather datas on page and make it like a slider
 
-//!get search form input
+//! Function to convert timestamps to date
+
+//! Function to detect what to display sunset or sunrise based on what cuurent date
+
+//! GET ELEMENTS
+
+//! INIT VARIABLES
+
+//! MyAPIkey
+
+//! Page reload event
+
+//! Search weather by cityname when u click enter by input button
+
+//! Search weather by cityname when u click search by input button
+
+//! Search weather when u click search by geo button
+
+//! Variable to store weather data that we get from api
+
+//! callback onError for .getCurrentPosition()
+
+//! callback onSuccess for .getCurrentPosition()
+
+//! get search form
+
+//! get search form input
+
+//! get urself back at searchForm by this btn
+
+//! save current/maden API Link to localStorage
+
+//! variable to store maden API Link
